@@ -44,6 +44,7 @@
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-30520210106003",
     "@dcloudio/uni-h5": "^2.0.0-30520210106003",
+    "@dcloudio/uni-helper-json": "*",
     "@dcloudio/uni-mp-360": "^2.0.0-30520210106003",
     "@dcloudio/uni-mp-alipay": "^2.0.0-30520210106003",
     "@dcloudio/uni-mp-baidu": "^2.0.0-30520210106003",
@@ -57,10 +58,14 @@
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
+    "node-sass": "^5.0.0",
+    "regenerator-runtime": "^0.12.1",
+    "sass-loader": "^10.1.1",
     "vue": "^2.6.11",
     "vuex": "^3.2.0"
   },
   "devDependencies": {
+    "@dcloudio/types": "*",
     "@dcloudio/uni-automator": "^2.0.0-30520210106003",
     "@dcloudio/uni-cli-shared": "^2.0.0-30520210106003",
     "@dcloudio/uni-migration": "^2.0.0-30520210106003",
@@ -75,12 +80,17 @@
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
+    "mini-types": "*",
+    "miniprogram-api-typings": "*",
+    "postcss-comment": "^2.0.0",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "Android >= 4",
     "ios >= 8"
   ],
+  "_id": "my-project@0.1.0",
+  "readme": "ERROR: No README data found!",
   "uni-app": {
     "scripts": {}
   }
