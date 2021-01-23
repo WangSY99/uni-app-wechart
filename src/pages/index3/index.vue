@@ -11,11 +11,20 @@
     <view>========================</view>
     <view>
       <!-- list 通过view标签来显示 -->
-      <view
-      v-for="(item) in list"
-      :key="item.id"
-      >
-      {{item.id}} -- {{item.text}}
+      <view v-for="(item, index) in list" :key="item.id" v-if="item.id <= 0">
+        {{ item.id }} -- {{ item.text }} -- {{ index }}
+      </view>
+      <view>----------------------</view>
+      <view>
+        <view v-if="false">v-if</view>
+        <view v-show="true">v-show</view>
+      </view>
+      <view> ￥{{ money }} </view>
+      <view> {{ cnMoney }} </view>
+      <view>
+        <view v-for="item in filterList" :key="item.id">
+          {{ item.text }}
+        </view>
       </view>
     </view>
   </view>
@@ -38,23 +47,36 @@ export default {
         skill: "72变",
       },
       // 颜色
-      color:"aqua",
+      color: "aqua",
       //数组
-      list:[
+      list: [
         {
-          id:0,
-          text:"苹果"
+          id: 0,
+          text: "苹果",
         },
         {
-          id:1,
-          text:"香蕉"
+          id: 1,
+          text: "香蕉",
         },
         {
-          id:2,
-          text:"樱桃"
-        }
-      ]
+          id: 2,
+          text: "樱桃",
+        },
+      ],
     };
+  },
+  //2 计算属性
+  computed: {
+    // 把cnMoney看成是在data中的普通的数据来使用即可
+    cnMoney() {
+      //￥1000
+      return "￥" + this.money;
+    },
+    // 过滤数组
+    filterList() {
+      //只要id>0 都不要显示
+      return this.list.filter((v) => v.id <= 0);
+    },
   },
 };
 </script>
