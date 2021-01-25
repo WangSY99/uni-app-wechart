@@ -6,11 +6,11 @@
     <view>{{ isRich }}</view>
     <view>{{ person.name }}</view>
     <view>{{ person.skill }}</view>
-    <!-- 在标签上通过属性的方式来使用数据 -->
+    <!-- 在标签上通过属性的方式来使用数据 这里data-color为自定义属性名，加冒号代表color是变量，和javascript中的color链接-->
     <view :data-color="color">color</view>
     <view>========================</view>
     <view>
-      <!-- list 通过view标签来显示 -->
+      <!-- list 通过view标签来显示 不建议在循环后面再叠加循环，建议用嵌套结构-->
       <view v-for="(item, index) in list" :key="item.id" v-if="item.id <= 0">
         {{ item.id }} -- {{ item.text }} -- {{ index }}
       </view>
